@@ -175,7 +175,7 @@
     "font": "Inter, system-ui, sans-serif"
   },
   "logo": {
-    "enabled": false,
+    "enabled": true,
     "image": "assets/media/1790293448587-bamzolin.png"
   },
   "footer": {
