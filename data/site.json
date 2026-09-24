@@ -181,8 +181,8 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© {year} {name}",
+    "copyright": "© 2026 Bamise Oladimeji. All rights reserved.",
     "showNavigation": true,
-    "showSocials": true
+    "showSocials": false
   }
 }
