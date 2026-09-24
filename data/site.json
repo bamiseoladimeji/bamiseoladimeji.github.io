@@ -1,0 +1,176 @@
+{
+  "site": {
+    "name": "Your Name",
+    "shortName": "YN",
+    "role": "Graphic Designer & Visual Storyteller",
+    "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
+    "location": "Lagos, Nigeria",
+    "email": "hello@example.com",
+    "availability": "Available for select projects"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Testimonials",
+      "href": "#testimonials"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Graphic Designer / Art Director",
+    "title": "Your Name",
+    "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
+    "primaryCta": "View My Work",
+    "secondaryCta": "Get In Touch",
+    "heroImage": "assets/hero-placeholder.svg"
+  },
+  "projects": [
+    {
+      "id": "project-01",
+      "title": "NEXA",
+      "category": "Brand Identity",
+      "year": "2026",
+      "description": "A bold visual identity built around contrast, movement and a confident editorial voice.",
+      "image": "assets/project-01.svg",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "project-02",
+      "title": "Good Food",
+      "category": "Social Media Design",
+      "year": "2026",
+      "description": "A bright campaign system designed to make food, freshness and personality impossible to miss.",
+      "image": "assets/project-02.svg",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "project-03",
+      "title": "Next Gen",
+      "category": "Poster Design",
+      "year": "2025",
+      "description": "An experimental poster series exploring typography, scale and contemporary culture.",
+      "image": "assets/project-03.svg",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "project-04",
+      "title": "GreenFlow",
+      "category": "UI/UX Design",
+      "year": "2025",
+      "description": "A clean digital experience for a sustainability-focused product.",
+      "image": "assets/project-04.svg",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "project-05",
+      "title": "Modern Living",
+      "category": "Editorial Design",
+      "year": "2025",
+      "description": "Editorial art direction balancing typography, photography and generous whitespace.",
+      "image": "assets/project-05.svg",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "project-06",
+      "title": "Vora",
+      "category": "Packaging Design",
+      "year": "2025",
+      "description": "A restrained packaging system created to feel tactile, premium and memorable.",
+      "image": "assets/project-06.svg",
+      "featured": false,
+      "link": "#"
+    }
+  ],
+  "about": {
+    "eyebrow": "About Me",
+    "title": "Design with intention.",
+    "text": "I'm a graphic designer and visual storyteller focused on branding, digital design, campaigns and visual systems. I combine strategy, typography and art direction to turn ideas into memorable experiences.",
+    "stats": [
+      {
+        "value": "4+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "50+",
+        "label": "Projects Completed"
+      },
+      {
+        "value": "30+",
+        "label": "Happy Clients"
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Brand Identity",
+      "description": "Visual identities, logos, brand systems and guidelines."
+    },
+    {
+      "title": "Graphic Design",
+      "description": "Campaigns, posters, social content and marketing collateral."
+    },
+    {
+      "title": "Art Direction",
+      "description": "Concept development, visual language and creative direction."
+    },
+    {
+      "title": "Digital Design",
+      "description": "Web, social and interface visuals designed for digital spaces."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "A thoughtful creative partner who turns rough ideas into polished visual systems.",
+      "name": "Client Name",
+      "role": "Founder, Company"
+    },
+    {
+      "quote": "The work was strategic, distinctive and delivered with real attention to detail.",
+      "name": "Client Name",
+      "role": "Marketing Lead"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "#"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "#"
+    },
+    {
+      "label": "Behance",
+      "url": "#"
+    }
+  ],
+  "settings": {
+    "accent": "#ff4d1f",
+    "dark": "#0b0c0e",
+    "light": "#f5f2eb",
+    "font": "Inter, system-ui, sans-serif"
+  }
+}
