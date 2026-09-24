@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "Bamzolin Labs",
-    "shortName": "Bamzolin Labs",
+    "name": "Your Name",
+    "shortName": "YN",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
@@ -36,11 +36,12 @@
   ],
   "hero": {
     "eyebrow": "Graphic Designer / Art Director",
-    "title": "Bamise Oladimeji",
+    "title": "Your Name",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "assets/hero-placeholder.svg"
+    "heroImage": "assets/hero-placeholder.svg",
+    "portraitEnabled": true
   },
   "projects": [
     {
@@ -172,5 +173,16 @@
     "dark": "#0b0c0e",
     "light": "#f5f2eb",
     "font": "Inter, system-ui, sans-serif"
+  },
+  "logo": {
+    "enabled": false,
+    "image": ""
+  },
+  "footer": {
+    "enabled": true,
+    "text": "Designed & built with intention.",
+    "copyright": "© {year} {name}",
+    "showNavigation": true,
+    "showSocials": true
   }
 }
