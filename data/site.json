@@ -40,7 +40,7 @@
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "assets/hero-placeholder.svg",
+    "heroImage": "",
     "portraitEnabled": true
   },
   "projects": [
@@ -191,7 +191,7 @@
   },
   "logo": {
     "enabled": true,
-    "image": "assets/media/1790293448587-bamzolin.png"
+    "image": "assets/media/1790294227661-bamzolin.png"
   },
   "footer": {
     "enabled": true,
