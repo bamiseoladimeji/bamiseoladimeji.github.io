@@ -103,6 +103,16 @@
       "image": "assets/project-06.svg",
       "featured": false,
       "link": "#"
+    },
+    {
+      "id": "project-1790293693660-dezbh",
+      "title": "PrymeKids",
+      "category": "Social Media/Brand Design",
+      "year": "2026",
+      "description": "Project description.",
+      "image": "assets/project-01.svg",
+      "featured": false,
+      "link": "#"
     }
   ],
   "about": {
