@@ -52,9 +52,15 @@
       "description": "A bold visual identity built around contrast, movement and a confident editorial voice.",
       "image": "assets/project-01.svg",
       "featured": true,
-      "gallery": [],
+      "gallery": [
+        {
+          "id": "gallery-1790296934453-f8s61",
+          "image": "assets/media/1790296960982-aviora-accessories2.webp",
+          "title": "Image 1"
+        }
+      ],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "https://pin.it/6ONtwf0sG"
     },
     {
       "id": "project-02",
