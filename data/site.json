@@ -174,11 +174,11 @@
   ],
   "socials": [
     {
-      "label": "Instagram",
+      "label": "LinkedIn",
       "url": "#"
     },
     {
-      "label": "LinkedIn",
+      "label": "Instagram",
       "url": "#"
     },
     {
@@ -192,10 +192,10 @@
     "light": "#f5f2eb",
     "font": "Inter, system-ui, sans-serif",
     "headingFont": "Space Grotesk, system-ui, sans-serif",
-    "maxWidth": 1240,
-    "buttonRadius": 999,
-    "cardRadius": 15,
-    "imageRadius": 0,
+    "maxWidth": "1240",
+    "buttonRadius": "999",
+    "cardRadius": "15",
+    "imageRadius": "0",
     "grayscaleImages": true
   },
   "logo": {
@@ -205,7 +205,7 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© {year} {name}",
+    "copyright": "© Bamise Oladimeji. All Rights Reserved.",
     "showNavigation": true,
     "showSocials": true
   },
