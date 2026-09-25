@@ -3,7 +3,17 @@ async function loadData(){const r=await fetch(FALLBACK,{cache:'no-store'});retur
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function render(d){
  document.title=`${d.site.name} — ${d.site.role}`;
- document.documentElement.style.setProperty('--accent',d.settings.accent);
+ const settings=d.settings||{};
+ document.documentElement.style.setProperty('--accent',settings.accent||'#ff4d1f');
+ document.documentElement.style.setProperty('--ink',settings.dark||'#0b0c0e');
+ document.documentElement.style.setProperty('--paper',settings.light||'#f5f2eb');
+ document.documentElement.style.setProperty('--max',`${Number(settings.maxWidth)||1240}px`);
+ document.documentElement.style.setProperty('--radius',`${Number(settings.buttonRadius)||999}px`);
+ document.documentElement.style.setProperty('--card-radius',`${Number(settings.cardRadius)||15}px`);
+ document.documentElement.style.setProperty('--image-radius',`${Number(settings.imageRadius)||0}px`);
+ document.documentElement.style.setProperty('--body-font',settings.font||'DM Sans, system-ui, sans-serif');
+ document.documentElement.style.setProperty('--heading-font',settings.headingFont||'Space Grotesk, system-ui, sans-serif');
+ document.documentElement.style.setProperty('--image-filter',settings.grayscaleImages===false?'none':'grayscale(1)');
  const nav=d.navigation.map(n=>`<a href="${esc(n.href)}">${esc(n.label)}</a>`).join('');
  const workSection=d.workSection||{}; const servicesSection=d.servicesSection||{}; const testimonialsSection=d.testimonialsSection||{}; const contactSection=d.contactSection||{}; const header=d.header||{};
  const projects=d.projects.map((p,i)=>{
