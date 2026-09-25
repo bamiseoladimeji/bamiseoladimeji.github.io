@@ -1,39 +1,40 @@
-# Personal Designer Portfolio — GitHub Pages
+# Personal Designer Portfolio — V8
 
-A free static graphic-design portfolio with a GitHub-backed admin dashboard.
+V8 is the production-hardening build of the portfolio CMS.
 
-## Files
-- `index.html` — public website
-- `admin.html` — private admin interface
-- `data/site.json` — editable site content
-- `assets/` — images and placeholders
-- `js/site.js` — public renderer
-- `js/admin.js` — GitHub API editor
-- `style.css` / `admin.css` — styling
+## Public site
+- Responsive editorial/personal-designer layout
+- Mobile navigation
+- Accessible skip link and keyboard focus states
+- Reduced-motion support
+- Project case-study modal with gallery, details and previous/next navigation
+- Safe handling of configured URLs and image paths
+- Lazy-loaded gallery/project images
+- SEO title, description and Open Graph/Twitter metadata from `data/site.json`
+- Static mailto contact enquiry
 
-## Deploy
-1. Create a GitHub repository named `YOURUSERNAME.github.io`.
-2. Upload all files in this folder to the repository.
-3. GitHub → Settings → Pages → Deploy from branch → `main` → `/ (root)`.
-4. Open `https://YOURUSERNAME.github.io/`.
-5. Open `/admin.html` for the admin dashboard.
+## Admin
+- Homepage content
+- Projects, galleries and case studies
+- Testimonials
+- Footer
+- About
+- Services
+- Navigation
+- Social links
+- Appearance
+- SEO & Contact
+- Section visibility
+- Advanced JSON editor
+- Downloadable `site.json` backup
+- Unsaved-change warning
+- GitHub Pages publishing through the GitHub Contents API
 
-## Admin connection
-The dashboard uses a GitHub fine-grained personal access token to commit edits to `data/site.json`.
-Give the token access only to this portfolio repository and Contents: Read and write.
-The token is held in browser session storage, not in the website source.
+## Deployment
+1. Replace the contents of your existing repository with this folder's contents.
+2. Commit to the branch used by GitHub Pages (normally `main`).
+3. Open `/admin.html`.
+4. Use the same fine-grained GitHub token with repository Contents read/write permission.
+5. Save changes with **Save to GitHub**.
 
-## Important
-This is a deliberately serverless architecture so the hosting remains free on GitHub Pages. A truly public login system with passwords, secure sessions, and a database requires a backend. This dashboard instead authenticates the administrator directly against GitHub.
-
-
-CMS v2: improved browser image uploads with validation, clearer GitHub API errors, and automatic enablement for uploaded logo/hero images.
-
-
-CMS image uploads now automatically resize and compress raster images in the browser before sending them to GitHub. Target output is <= 3 MB when possible. SVG files are uploaded unchanged.
-
-
-## V5 additions
-- Homepage editor for hero, header, project/about/services/testimonials/contact section labels and links.
-- Testimonials manager supports optional client photos with the same automatic image optimization.
-- Hero CTA links and header Hire button are editable without code.
+The token is stored only in `sessionStorage` for the current browser session. Never publish the token in the repository.
