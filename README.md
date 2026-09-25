@@ -31,3 +31,9 @@ CMS v2: improved browser image uploads with validation, clearer GitHub API error
 
 
 CMS image uploads now automatically resize and compress raster images in the browser before sending them to GitHub. Target output is <= 3 MB when possible. SVG files are uploaded unchanged.
+
+
+## V5 additions
+- Homepage editor for hero, header, project/about/services/testimonials/contact section labels and links.
+- Testimonials manager supports optional client photos with the same automatic image optimization.
+- Hero CTA links and header Hire button are editable without code.

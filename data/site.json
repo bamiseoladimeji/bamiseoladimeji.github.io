@@ -1,11 +1,11 @@
 {
   "site": {
-    "name": "Bamise Oladimeji",
-    "shortName": "Bamzolin Labs",
+    "name": "Your Name",
+    "shortName": "YN",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
-    "email": "bamiseoladimeji615@gmail.com",
+    "email": "hello@example.com",
     "availability": "Available for select projects"
   },
   "navigation": [
@@ -36,12 +36,14 @@
   ],
   "hero": {
     "eyebrow": "Graphic Designer / Art Director",
-    "title": "Bamise Oladimeji",
+    "title": "Your Name",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
     "heroImage": "assets/hero-placeholder.svg",
-    "portraitEnabled": false
+    "portraitEnabled": true,
+    "primaryCtaUrl": "#work",
+    "secondaryCtaUrl": "#contact"
   },
   "projects": [
     {
@@ -52,15 +54,9 @@
       "description": "A bold visual identity built around contrast, movement and a confident editorial voice.",
       "image": "assets/project-01.svg",
       "featured": true,
-      "gallery": [
-        {
-          "id": "gallery-1790296934453-f8s61",
-          "image": "assets/media/1790296960982-aviora-accessories2.webp",
-          "title": "Image 1"
-        }
-      ],
+      "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": "https://pin.it/6ONtwf0sG"
+      "viewMoreUrl": ""
     },
     {
       "id": "project-02",
@@ -129,15 +125,15 @@
     "text": "I'm a graphic designer and visual storyteller focused on branding, digital design, campaigns and visual systems. I combine strategy, typography and art direction to turn ideas into memorable experiences.",
     "stats": [
       {
-        "value": "10+",
+        "value": "4+",
         "label": "Years Experience"
       },
       {
-        "value": "100+",
+        "value": "50+",
         "label": "Projects Completed"
       },
       {
-        "value": "90+",
+        "value": "30+",
         "label": "Happy Clients"
       }
     ]
@@ -164,12 +160,16 @@
     {
       "quote": "A thoughtful creative partner who turns rough ideas into polished visual systems.",
       "name": "Client Name",
-      "role": "Founder, Company"
+      "role": "Founder, Company",
+      "photo": "",
+      "photoEnabled": true
     },
     {
       "quote": "The work was strategic, distinctive and delivered with real attention to detail.",
       "name": "Client Name",
-      "role": "Marketing Lead"
+      "role": "Marketing Lead",
+      "photo": "",
+      "photoEnabled": true
     }
   ],
   "socials": [
@@ -182,7 +182,7 @@
       "url": "#"
     },
     {
-      "label": "Whatsapp",
+      "label": "Behance",
       "url": "#"
     }
   ],
@@ -199,12 +199,33 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© 2026 Bamise Oladimeji. All Rights Reserved.",
+    "copyright": "© {year} {name}",
     "showNavigation": true,
     "showSocials": true
   },
   "projectSection": {
     "viewAllLabel": "View All Projects",
-    "viewAllUrl": "https://www.pinterest.com/thatcreativebamzo/"
+    "viewAllUrl": "#work"
+  },
+  "workSection": {
+    "eyebrow": "Featured Work",
+    "title": "Selected Projects"
+  },
+  "servicesSection": {
+    "eyebrow": "What I Do",
+    "title": "Services"
+  },
+  "testimonialsSection": {
+    "eyebrow": "Kind Words",
+    "title": "Testimonials"
+  },
+  "contactSection": {
+    "eyebrow": "Let's Work Together",
+    "title": "Have a project in mind?",
+    "description": "Let's talk about what we can create."
+  },
+  "header": {
+    "hireLabel": "Hire Me",
+    "hireUrl": "#contact"
   }
 }
