@@ -40,8 +40,8 @@
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "assets/media/1790295083887-papa_.webp",
-    "portraitEnabled": true
+    "heroImage": "",
+    "portraitEnabled": false
   },
   "projects": [
     {
