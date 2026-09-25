@@ -25,3 +25,9 @@ The token is held in browser session storage, not in the website source.
 
 ## Important
 This is a deliberately serverless architecture so the hosting remains free on GitHub Pages. A truly public login system with passwords, secure sessions, and a database requires a backend. This dashboard instead authenticates the administrator directly against GitHub.
+
+
+CMS v2: improved browser image uploads with validation, clearer GitHub API errors, and automatic enablement for uploaded logo/hero images.
+
+
+CMS image uploads now automatically resize and compress raster images in the browser before sending them to GitHub. Target output is <= 3 MB when possible. SVG files are uploaded unchanged.

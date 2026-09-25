@@ -13,19 +13,114 @@ function collect(){document.querySelectorAll('[data-path]').forEach(e=>setPath(e
 function notice(msg,good=true){const n=$('#notice');n.textContent=msg;n.className='notice '+(good?'good':'bad');setTimeout(()=>n.classList.add('hidden'),3500)}
 async function getFile(){const r=await api(`/repos/${owner}/${repo}/contents/data/site.json?ref=main`);if(!r.ok)throw new Error('Could not read data/site.json. Check the repository, branch and token permissions.');const j=await r.json();sha=j.sha;state=JSON.parse(from64(j.content.replace(/\n/g,'')));normalize()}
 function normalize(){state.site ||= {};state.hero ||= {};state.projects ||= [];state.testimonials ||= [];state.about ||= {stats:[]};state.services ||= [];state.socials ||= [];state.navigation ||= [];state.settings ||= {};state.logo ||= {enabled:false,image:''};state.footer ||= {enabled:true,text:'Designed & built with intention.',copyright:'© {year} {name}',showNavigation:true,showSocials:true};state.hero.portraitEnabled = state.hero.portraitEnabled!==false;state.hero.heroImage ||= '';state.logo.enabled=state.logo.enabled===true}
-async function uploadFile(file,folder='assets/media'){
-  if(!file) return null;
-  if(file.size>10*1024*1024) throw new Error('Please keep portfolio images under 10 MB.');
-  const safe=file.name.toLowerCase().replace(/[^a-z0-9._-]+/g,'-');
-  const path=`${folder}/${Date.now()}-${safe}`;
-  const data=await file.arrayBuffer();let bytes='';const arr=new Uint8Array(data);const chunk=0x8000;for(let i=0;i<arr.length;i+=chunk)bytes+=String.fromCharCode(...arr.subarray(i,i+chunk));
-  const r=await api(`/repos/${owner}/${repo}/contents/${path}`,{method:'PUT',body:JSON.stringify({message:`Upload ${path}`,content:btoa(bytes),branch:'main'})});
-  if(!r.ok)throw new Error('Image upload failed: '+(await r.text()));
+async function optimizeImage(file, options = {}) {
+  const maxDimension = options.maxDimension || 2400;
+  const targetBytes = options.targetBytes || 3 * 1024 * 1024;
+  const qualityStart = options.quality || 0.86;
+
+  if (!file.type.startsWith('image/')) throw new Error('Please choose an image file.');
+
+  // SVGs are already vector/compressed and should be uploaded unchanged.
+  if (file.type === 'image/svg+xml') return { blob: file, extension: 'svg', originalBytes: file.size, optimizedBytes: file.size, width: null, height: null };
+
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, maxDimension / Math.max(bitmap.width, bitmap.height));
+  const width = Math.max(1, Math.round(bitmap.width * scale));
+  const height = Math.max(1, Math.round(bitmap.height * scale));
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d', { alpha: true });
+  ctx.drawImage(bitmap, 0, 0, width, height);
+  bitmap.close();
+
+  // Prefer WebP for much smaller portfolio images. Fall back to JPEG if WebP is unavailable.
+  const type = 'image/webp';
+  let quality = qualityStart;
+  let blob = await new Promise(resolve => canvas.toBlob(resolve, type, quality));
+  let extension = 'webp';
+
+  if (!blob) {
+    extension = 'jpg';
+    blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', quality));
+  }
+
+  // Reduce quality progressively if the browser produced a file larger than our target.
+  while (blob && blob.size > targetBytes && quality > 0.45) {
+    quality -= 0.08;
+    const next = await new Promise(resolve => canvas.toBlob(resolve, type, quality));
+    if (!next) break;
+    blob = next;
+  }
+
+  if (!blob) throw new Error('Your browser could not process this image. Try JPG or PNG.');
+  return { blob, extension, originalBytes: file.size, optimizedBytes: blob.size, width, height };
+}
+
+async function blobToBase64(blob) {
+  const buffer = await blob.arrayBuffer();
+  const arr = new Uint8Array(buffer);
+  let binary = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < arr.length; i += chunk) {
+    binary += String.fromCharCode(...arr.subarray(i, Math.min(i + chunk, arr.length)));
+  }
+  return btoa(binary);
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+}
+
+async function uploadFile(file, folder='assets/media', options={}) {
+  if (!file) return null;
+  const optimized = await optimizeImage(file, options);
+  const base = file.name.replace(/\.[^/.]+$/,'').toLowerCase().replace(/[^a-z0-9_-]+/g,'-').replace(/^-+|-+$/g,'') || 'image';
+  const path = `${folder}/${Date.now()}-${base}.${optimized.extension}`;
+  const content = await blobToBase64(optimized.blob);
+  const endpoint = `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${path.split('/').map(encodeURIComponent).join('/')}?ref=main`;
+  const r = await api(endpoint, {method:'PUT', body:JSON.stringify({message:`Upload optimized ${path}`,content,branch:'main'})});
+  const body = await r.text();
+  if (!r.ok) throw new Error(`Image upload failed (${r.status}): ${body}`);
+  return { path, originalBytes: optimized.originalBytes, optimizedBytes: optimized.optimizedBytes, width: optimized.width, height: optimized.height };
+}
+
+function publicAssetUrl(path){
+  if(!path)return '';
+  if(/^https?:\/\//i.test(path))return path;
   return path;
 }
 async function deleteFile(path){if(!path||!path.startsWith('assets/media/'))return;const r=await api(`/repos/${owner}/${repo}/contents/${path}?ref=main`);if(!r.ok)return;const j=await r.json();await api(`/repos/${owner}/${repo}/contents/${path}`,{method:'DELETE',body:JSON.stringify({message:`Remove ${path}`,sha:j.sha,branch:'main'})})}
-function fileControl(label,path,enabledPath=''){return `<div class="field"><label>${label}</label><div class="upload"><input type="file" accept="image/*" data-upload-path="${path}">${enabledPath?checkbox('Show on website',enabledPath,val(enabledPath)):''}<button class="secondary" type="button" onclick="handleUpload(this)">Upload</button></div><div class="small">Uploading creates a file in <code>assets/media/</code>. Then save the content.</div></div>`}
-window.handleUpload=async(btn)=>{const wrap=btn.parentElement;const f=wrap.querySelector('input[type=file]').files[0];const path=wrap.querySelector('input[type=file]').dataset.uploadPath;if(!f)return notice('Choose an image first.',false);btn.disabled=true;btn.textContent='Uploading…';try{const old=val(path);const uploaded=await uploadFile(f);setPath(path,uploaded);if(old)await deleteFile(old);render();notice('Image uploaded. Press Save to GitHub to publish the content.')}catch(e){notice(e.message,false)}finally{btn.disabled=false;btn.textContent='Upload'}};
+function fileControl(label,path,enabledPath=''){return `<div class="field"><label>${label}</label><div class="upload"><input type="file" accept="image/*" data-upload-path="${path}">${enabledPath?checkbox('Show on website',enabledPath,val(enabledPath)):''}<button class="secondary" type="button" onclick="handleUpload(this)">Upload</button></div><div class="small">Large images are automatically resized and compressed to WebP/JPG before upload. The optimized file is saved in <code>assets/media/</code>. Then save the content.</div></div>`}
+window.handleUpload=async(btn)=>{
+  const wrap=btn.parentElement;
+  const input=wrap.querySelector('input[type=file]');
+  const f=input?.files?.[0];
+  const path=input?.dataset?.uploadPath;
+  if(!f) return notice('Choose an image first.',false);
+  btn.disabled=true;
+  btn.textContent='Optimizing…';
+  try{
+    const old=val(path);
+    const maxDimension = path==='logo.image' ? 256 : 2400;
+    const result=await uploadFile(f,'assets/media',{maxDimension,targetBytes:3*1024*1024});
+    setPath(path,result.path);
+    if(path==='hero.heroImage') state.hero.portraitEnabled=true;
+    if(path==='logo.image') state.logo.enabled=true;
+    if(old && old!==result.path) await deleteFile(old);
+    render();
+    const reduction=Math.max(0,Math.round((1-result.optimizedBytes/result.originalBytes)*100));
+    notice(`Uploaded and optimized: ${formatBytes(result.originalBytes)} → ${formatBytes(result.optimizedBytes)} (${reduction}% smaller). Now click “Save to GitHub”.`);
+  }catch(e){
+    notice(e.message||'Image upload failed.',false);
+  }finally{
+    btn.disabled=false;
+    btn.textContent='Upload';
+  }
+};
+
 function render(){
  $('#pageTitle').textContent=({site:'Site & Hero',projects:'Projects',testimonials:'Testimonials',footer:'Footer',about:'About',services:'Services',theme:'Theme',advanced:'Advanced JSON',overview:'Overview'})[tab]||tab;
  const p=$('#panel');

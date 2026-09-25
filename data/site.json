@@ -40,7 +40,7 @@
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "",
+    "heroImage": "assets/hero-placeholder.svg",
     "portraitEnabled": true
   },
   "projects": [
@@ -103,16 +103,6 @@
       "image": "assets/project-06.svg",
       "featured": false,
       "link": "#"
-    },
-    {
-      "id": "project-1790293693660-dezbh",
-      "title": "PrymeKids",
-      "category": "Social Media/Brand Design",
-      "year": "2026",
-      "description": "Project description.",
-      "image": "assets/project-01.svg",
-      "featured": false,
-      "link": "#"
     }
   ],
   "about": {
@@ -162,11 +152,6 @@
       "quote": "The work was strategic, distinctive and delivered with real attention to detail.",
       "name": "Client Name",
       "role": "Marketing Lead"
-    },
-    {
-      "quote": "A great experience working together.",
-      "name": "Client Name",
-      "role": "Prymekids / Project Manager"
     }
   ],
   "socials": [
@@ -190,14 +175,14 @@
     "font": "Inter, system-ui, sans-serif"
   },
   "logo": {
-    "enabled": true,
-    "image": "assets/media/1790294227661-bamzolin.png"
+    "enabled": false,
+    "image": ""
   },
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© 2026 Bamise Oladimeji. All rights reserved.",
+    "copyright": "© {year} {name}",
     "showNavigation": true,
-    "showSocials": false
+    "showSocials": true
   }
 }
