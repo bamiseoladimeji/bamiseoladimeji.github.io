@@ -40,8 +40,8 @@
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "",
-    "portraitEnabled": false
+    "heroImage": "assets/hero-placeholder.svg",
+    "portraitEnabled": true
   },
   "projects": [
     {
@@ -52,7 +52,9 @@
       "description": "A bold visual identity built around contrast, movement and a confident editorial voice.",
       "image": "assets/project-01.svg",
       "featured": true,
-      "link": "#"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     },
     {
       "id": "project-02",
@@ -62,7 +64,9 @@
       "description": "A bright campaign system designed to make food, freshness and personality impossible to miss.",
       "image": "assets/project-02.svg",
       "featured": true,
-      "link": "https://pin.it/6ONtwf0sG"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     },
     {
       "id": "project-03",
@@ -72,7 +76,9 @@
       "description": "An experimental poster series exploring typography, scale and contemporary culture.",
       "image": "assets/project-03.svg",
       "featured": true,
-      "link": "#"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     },
     {
       "id": "project-04",
@@ -82,7 +88,9 @@
       "description": "A clean digital experience for a sustainability-focused product.",
       "image": "assets/project-04.svg",
       "featured": false,
-      "link": "#"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     },
     {
       "id": "project-05",
@@ -92,7 +100,9 @@
       "description": "Editorial art direction balancing typography, photography and generous whitespace.",
       "image": "assets/project-05.svg",
       "featured": false,
-      "link": "#"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     },
     {
       "id": "project-06",
@@ -102,7 +112,9 @@
       "description": "A restrained packaging system created to feel tactile, premium and memorable.",
       "image": "assets/project-06.svg",
       "featured": false,
-      "link": "#"
+      "gallery": [],
+      "viewMoreLabel": "View More",
+      "viewMoreUrl": ""
     }
   ],
   "about": {
@@ -184,5 +196,9 @@
     "copyright": "© {year} {name}",
     "showNavigation": true,
     "showSocials": true
+  },
+  "projectSection": {
+    "viewAllLabel": "View All Projects",
+    "viewAllUrl": "#work"
   }
 }
