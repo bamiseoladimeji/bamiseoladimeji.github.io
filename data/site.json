@@ -1,12 +1,12 @@
 {
   "site": {
-    "name": "Your Name",
-    "shortName": "YN",
+    "name": "Bamise Oladimeji",
+    "shortName": "Bamzolin Labs",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
-    "email": "hello@example.com",
-    "availability": "Available for select projects"
+    "email": "bamiseoladimeji615@gmail.com",
+    "availability": "Available for remote and contract projects"
   },
   "navigation": [
     {
@@ -35,13 +35,13 @@
     }
   ],
   "hero": {
-    "eyebrow": "Graphic Designer / Art Director",
-    "title": "Your Name",
+    "eyebrow": "Graphic Designer / Visual Storyteller",
+    "title": "Bamise Oladimeji",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
     "heroImage": "assets/hero-placeholder.svg",
-    "portraitEnabled": true,
+    "portraitEnabled": false,
     "primaryCtaUrl": "#work",
     "secondaryCtaUrl": "#contact"
   },
@@ -125,15 +125,15 @@
     "text": "I'm a graphic designer and visual storyteller focused on branding, digital design, campaigns and visual systems. I combine strategy, typography and art direction to turn ideas into memorable experiences.",
     "stats": [
       {
-        "value": "4+",
+        "value": "10+",
         "label": "Years Experience"
       },
       {
-        "value": "50+",
+        "value": "100+",
         "label": "Projects Completed"
       },
       {
-        "value": "30+",
+        "value": "100+",
         "label": "Happy Clients"
       }
     ]
@@ -211,7 +211,7 @@
   },
   "projectSection": {
     "viewAllLabel": "View All Projects",
-    "viewAllUrl": "#work"
+    "viewAllUrl": "https://www.pinterest.com/thatcreativebamzo/"
   },
   "workSection": {
     "eyebrow": "Featured Work",
