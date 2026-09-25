@@ -1,12 +1,12 @@
 {
   "site": {
-    "name": "Bamise Oladimeji",
-    "shortName": "Bamzolin Labs",
+    "name": "Your Name",
+    "shortName": "YN",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
-    "email": "bamiseoladimeji615@gmail.com",
-    "availability": "Available for remote and contract projects"
+    "email": "hello@example.com",
+    "availability": "Available for select projects"
   },
   "navigation": [
     {
@@ -35,13 +35,13 @@
     }
   ],
   "hero": {
-    "eyebrow": "Graphic Designer / Visual Storyteller",
-    "title": "Bamise Oladimeji",
+    "eyebrow": "Graphic Designer / Art Director",
+    "title": "Your Name",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
     "heroImage": "assets/hero-placeholder.svg",
-    "portraitEnabled": false,
+    "portraitEnabled": true,
     "primaryCtaUrl": "#work",
     "secondaryCtaUrl": "#contact"
   },
@@ -56,7 +56,14 @@
       "featured": true,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "A bold visual identity built around contrast, movement and a confident editorial voice.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     },
     {
       "id": "project-02",
@@ -68,7 +75,14 @@
       "featured": true,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "A bright campaign system designed to make food, freshness and personality impossible to miss.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     },
     {
       "id": "project-03",
@@ -80,7 +94,14 @@
       "featured": true,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "An experimental poster series exploring typography, scale and contemporary culture.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     },
     {
       "id": "project-04",
@@ -92,7 +113,14 @@
       "featured": false,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "A clean digital experience for a sustainability-focused product.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     },
     {
       "id": "project-05",
@@ -104,7 +132,14 @@
       "featured": false,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "Editorial art direction balancing typography, photography and generous whitespace.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     },
     {
       "id": "project-06",
@@ -116,7 +151,14 @@
       "featured": false,
       "gallery": [],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": ""
+      "viewMoreUrl": "",
+      "client": "",
+      "role": "Graphic Designer / Art Director",
+      "overview": "A restrained packaging system created to feel tactile, premium and memorable.",
+      "challenge": "",
+      "strategy": "",
+      "solution": "",
+      "results": ""
     }
   ],
   "about": {
@@ -125,15 +167,15 @@
     "text": "I'm a graphic designer and visual storyteller focused on branding, digital design, campaigns and visual systems. I combine strategy, typography and art direction to turn ideas into memorable experiences.",
     "stats": [
       {
-        "value": "10+",
+        "value": "4+",
         "label": "Years Experience"
       },
       {
-        "value": "100+",
+        "value": "50+",
         "label": "Projects Completed"
       },
       {
-        "value": "100+",
+        "value": "30+",
         "label": "Happy Clients"
       }
     ]
@@ -161,7 +203,7 @@
       "quote": "A thoughtful creative partner who turns rough ideas into polished visual systems.",
       "name": "Client Name",
       "role": "Founder, Company",
-      "photo": "assets/media/1790349613220-papa_.webp",
+      "photo": "",
       "photoEnabled": true
     },
     {
@@ -174,11 +216,11 @@
   ],
   "socials": [
     {
-      "label": "LinkedIn",
+      "label": "Instagram",
       "url": "#"
     },
     {
-      "label": "Instagram",
+      "label": "LinkedIn",
       "url": "#"
     },
     {
@@ -192,10 +234,10 @@
     "light": "#f5f2eb",
     "font": "Inter, system-ui, sans-serif",
     "headingFont": "Space Grotesk, system-ui, sans-serif",
-    "maxWidth": "1240",
-    "buttonRadius": "999",
-    "cardRadius": "15",
-    "imageRadius": "0",
+    "maxWidth": 1240,
+    "buttonRadius": 999,
+    "cardRadius": 15,
+    "imageRadius": 0,
     "grayscaleImages": true
   },
   "logo": {
@@ -205,13 +247,13 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© Bamise Oladimeji. All Rights Reserved.",
+    "copyright": "© {year} {name}",
     "showNavigation": true,
     "showSocials": true
   },
   "projectSection": {
     "viewAllLabel": "View All Projects",
-    "viewAllUrl": "https://www.pinterest.com/thatcreativebamzo/"
+    "viewAllUrl": "#work"
   },
   "workSection": {
     "eyebrow": "Featured Work",
@@ -233,5 +275,25 @@
   "header": {
     "hireLabel": "Hire Me",
     "hireUrl": "#contact"
+  },
+  "seo": {
+    "title": "Your Name — Graphic Designer & Visual Storyteller",
+    "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
+    "socialImage": "",
+    "favicon": ""
+  },
+  "visibility": {
+    "showHero": true,
+    "showProjects": true,
+    "showAbout": true,
+    "showServices": true,
+    "showTestimonials": true,
+    "showContact": true,
+    "showAllProjects": true
+  },
+  "contactForm": {
+    "enabled": false,
+    "buttonLabel": "Start a Project",
+    "emailSubject": "New project enquiry"
   }
 }
