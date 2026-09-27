@@ -1,40 +1,34 @@
-# Personal Designer Portfolio — V8
+# Portfolio CMS V9 — Final Polish Build
 
-V8 is the production-hardening build of the portfolio CMS.
+This is an upgrade for the existing GitHub Pages portfolio.
 
-## Public site
-- Responsive editorial/personal-designer layout
-- Mobile navigation
-- Accessible skip link and keyboard focus states
-- Reduced-motion support
-- Project case-study modal with gallery, details and previous/next navigation
-- Safe handling of configured URLs and image paths
-- Lazy-loaded gallery/project images
-- SEO title, description and Open Graph/Twitter metadata from `data/site.json`
-- Static mailto contact enquiry
+## IMPORTANT
+**Keep your existing `data/site.json`.** V9 intentionally does not include or replace that file, so your current portfolio content, uploaded images, projects, testimonials, and admin settings are preserved.
 
-## Admin
-- Homepage content
-- Projects, galleries and case studies
-- Testimonials
-- Footer
-- About
-- Services
-- Navigation
-- Social links
-- Appearance
-- SEO & Contact
-- Section visibility
-- Advanced JSON editor
-- Downloadable `site.json` backup
-- Unsaved-change warning
-- GitHub Pages publishing through the GitHub Contents API
+Replace/add the V9 files in your existing repository:
+- `index.html`
+- `style.css`
+- `admin.html`
+- `admin.css`
+- `js/site.js`
+- `js/admin.js`
+- `assets/*` only where needed
 
-## Deployment
-1. Replace the contents of your existing repository with this folder's contents.
-2. Commit to the branch used by GitHub Pages (normally `main`).
-3. Open `/admin.html`.
-4. Use the same fine-grained GitHub token with repository Contents read/write permission.
-5. Save changes with **Save to GitHub**.
+## V9 highlights
+- Refined hero composition with the portrait above the accent circle and a soft portrait edge blend.
+- Improved project-card hover treatment and project modal presentation.
+- Refined About, Services, Testimonials, Contact and Footer spacing.
+- Improved mobile composition and touch targets.
+- Active navigation state while scrolling.
+- Mobile menu closes after navigation and when clicking outside it.
+- Reduced-motion support.
+- Accessibility focus improvements.
+- Preserves V8 CMS functionality and GitHub publishing workflow.
 
-The token is stored only in `sessionStorage` for the current browser session. Never publish the token in the repository.
+## Deploy
+1. Back up your current repository if desired.
+2. Copy the V9 files into the root of the existing GitHub repository.
+3. **Do not delete or replace `data/site.json`.**
+4. Commit and push to `main`.
+5. Wait for GitHub Pages to redeploy.
+6. Hard-refresh the live site and `admin.html`.
