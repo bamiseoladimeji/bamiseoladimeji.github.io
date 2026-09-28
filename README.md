@@ -1,40 +1,16 @@
-# Personal Designer Portfolio — V8
+# Bamise Oladimeji Portfolio — V9.1 Repair Build
 
-V8 is the production-hardening build of the portfolio CMS.
+This build fixes the V9 `Could not load content` issue by restoring the required `data/site.json` file and using a safer relative content path.
 
-## Public site
-- Responsive editorial/personal-designer layout
-- Mobile navigation
-- Accessible skip link and keyboard focus states
-- Reduced-motion support
-- Project case-study modal with gallery, details and previous/next navigation
-- Safe handling of configured URLs and image paths
-- Lazy-loaded gallery/project images
-- SEO title, description and Open Graph/Twitter metadata from `data/site.json`
-- Static mailto contact enquiry
+## IMPORTANT: preserve your existing portfolio content
+If your GitHub repository already contains your real `data/site.json`, **keep that file**. Copy/replace the other V9.1 files, but do not overwrite your real `data/site.json` with the starter file in this package.
 
-## Admin
-- Homepage content
-- Projects, galleries and case studies
-- Testimonials
-- Footer
-- About
-- Services
-- Navigation
-- Social links
-- Appearance
-- SEO & Contact
-- Section visibility
-- Advanced JSON editor
-- Downloadable `site.json` backup
-- Unsaved-change warning
-- GitHub Pages publishing through the GitHub Contents API
+If your `data/site.json` was deleted by the V9 installation, restore it from the GitHub commit immediately before V9, then deploy V9.1. The included `data/site.json` is only a valid emergency starter so the site can load; it is not a backup of your latest live portfolio content.
 
-## Deployment
-1. Replace the contents of your existing repository with this folder's contents.
-2. Commit to the branch used by GitHub Pages (normally `main`).
-3. Open `/admin.html`.
-4. Use the same fine-grained GitHub token with repository Contents read/write permission.
-5. Save changes with **Save to GitHub**.
-
-The token is stored only in `sessionStorage` for the current browser session. Never publish the token in the repository.
+## Install
+1. Extract this ZIP.
+2. Copy the contents of `cmsedit` into the root of your existing GitHub Pages repository.
+3. If you have your real `data/site.json`, preserve it.
+4. Commit and push.
+5. Wait for GitHub Pages to deploy.
+6. Hard refresh the live site with Ctrl+Shift+R.

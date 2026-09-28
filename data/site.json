@@ -1,12 +1,13 @@
 {
   "site": {
-    "name": "Your Name",
+    "name": "Bamise Oladimeji",
     "shortName": "YN",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
-    "email": "hello@example.com",
-    "availability": "Available for select projects"
+    "email": "bamiseoladimeji613@gmail.com",
+    "availability": "Available for select projects",
+    "title": "Graphic Designer / Art Director"
   },
   "navigation": [
     {
@@ -36,7 +37,7 @@
   ],
   "hero": {
     "eyebrow": "Graphic Designer / Art Director",
-    "title": "Your Name",
+    "title": "Bamise Oladimeji",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
@@ -247,7 +248,7 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© {year} {name}",
+    "copyright": "\u00a9 {year} {name}",
     "showNavigation": true,
     "showSocials": true
   },
@@ -270,14 +271,15 @@
   "contactSection": {
     "eyebrow": "Let's Work Together",
     "title": "Have a project in mind?",
-    "description": "Let's talk about what we can create."
+    "description": "Let's talk about what we can create.",
+    "email": "bamiseoladimeji613@gmail.com"
   },
   "header": {
     "hireLabel": "Hire Me",
     "hireUrl": "#contact"
   },
   "seo": {
-    "title": "Your Name — Graphic Designer & Visual Storyteller",
+    "title": "Your Name \u2014 Graphic Designer & Visual Storyteller",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "socialImage": "",
     "favicon": ""
