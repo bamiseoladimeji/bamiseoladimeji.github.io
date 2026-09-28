@@ -42,7 +42,7 @@
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
     "heroImage": "assets/hero-placeholder.svg",
-    "portraitEnabled": true,
+    "portraitEnabled": false,
     "primaryCtaUrl": "#work",
     "secondaryCtaUrl": "#contact"
   },
@@ -248,7 +248,7 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "\u00a9 {year} {name}",
+    "copyright": "© {year} {name}",
     "showNavigation": true,
     "showSocials": true
   },
@@ -279,7 +279,7 @@
     "hireUrl": "#contact"
   },
   "seo": {
-    "title": "Your Name \u2014 Graphic Designer & Visual Storyteller",
+    "title": "Your Name — Graphic Designer & Visual Storyteller",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "socialImage": "",
     "favicon": ""
