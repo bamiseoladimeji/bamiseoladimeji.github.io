@@ -248,8 +248,8 @@
     "enabled": true,
     "text": "Designed & built with intention.",
     "copyright": "© 2026 Bamise Oladimeji. All Rights Reserved.",
-    "showNavigation": true,
-    "showSocials": true
+    "showNavigation": false,
+    "showSocials": false
   },
   "projectSection": {
     "viewAllLabel": "View All Projects",
