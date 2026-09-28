@@ -234,10 +234,10 @@
     "light": "#f5f2eb",
     "font": "Inter, system-ui, sans-serif",
     "headingFont": "Space Grotesk, system-ui, sans-serif",
-    "maxWidth": 1240,
-    "buttonRadius": 999,
-    "cardRadius": 15,
-    "imageRadius": 0,
+    "maxWidth": "1240",
+    "buttonRadius": "999",
+    "cardRadius": "15",
+    "imageRadius": "0",
     "grayscaleImages": true
   },
   "logo": {
@@ -277,7 +277,7 @@
     "hireUrl": "#contact"
   },
   "seo": {
-    "title": "Your Name — Graphic Designer & Visual Storyteller",
+    "title": "Bamise Oladimeji — Graphic Designer & Visual Storyteller",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "socialImage": "",
     "favicon": ""
@@ -292,7 +292,7 @@
     "showAllProjects": true
   },
   "contactForm": {
-    "enabled": false,
+    "enabled": true,
     "buttonLabel": "Start a Project",
     "emailSubject": "New project enquiry"
   }
