@@ -1,11 +1,11 @@
 {
   "site": {
-    "name": "Bamise Oladimeji ",
-    "shortName": "Bamzolin Labs ",
+    "name": "Your Name",
+    "shortName": "YN",
     "role": "Graphic Designer & Visual Storyteller",
     "tagline": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "location": "Lagos, Nigeria",
-    "email": "bamiseoladimeji615@gmail.com",
+    "email": "hello@example.com",
     "availability": "Available for select projects"
   },
   "navigation": [
@@ -35,12 +35,12 @@
     }
   ],
   "hero": {
-    "eyebrow": "Graphic Designer / Visual Storyteller ",
-    "title": "Bamise Oladimeji ",
+    "eyebrow": "Graphic Designer / Art Director",
+    "title": "Your Name",
     "description": "I create bold, strategic and visually compelling designs that help brands tell their stories and stand out.",
     "primaryCta": "View My Work",
     "secondaryCta": "Get In Touch",
-    "heroImage": "assets/media/1790353726489-papa_.webp",
+    "heroImage": "assets/hero-placeholder.svg",
     "portraitEnabled": true,
     "primaryCtaUrl": "#work",
     "secondaryCtaUrl": "#contact"
@@ -167,15 +167,15 @@
     "text": "I'm a graphic designer and visual storyteller focused on branding, digital design, campaigns and visual systems. I combine strategy, typography and art direction to turn ideas into memorable experiences.",
     "stats": [
       {
-        "value": "7+",
+        "value": "4+",
         "label": "Years Experience"
       },
       {
-        "value": "100+",
+        "value": "50+",
         "label": "Projects Completed"
       },
       {
-        "value": "85+",
+        "value": "30+",
         "label": "Happy Clients"
       }
     ]
@@ -210,13 +210,6 @@
       "quote": "The work was strategic, distinctive and delivered with real attention to detail.",
       "name": "Client Name",
       "role": "Marketing Lead",
-      "photo": "",
-      "photoEnabled": true
-    },
-    {
-      "quote": "A great experience working together.",
-      "name": "Fauzeeya Shuaibu ",
-      "role": "Project Manager, Prymekids",
       "photo": "",
       "photoEnabled": true
     }
@@ -254,13 +247,13 @@
   "footer": {
     "enabled": true,
     "text": "Designed & built with intention.",
-    "copyright": "© Bamise Oladimeji. All Rights Reserved. ",
+    "copyright": "© {year} {name}",
     "showNavigation": true,
     "showSocials": true
   },
   "projectSection": {
     "viewAllLabel": "View All Projects",
-    "viewAllUrl": "https://pin.it/3yERccpiH"
+    "viewAllUrl": "#work"
   },
   "workSection": {
     "eyebrow": "Featured Work",
