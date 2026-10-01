@@ -295,5 +295,11 @@
     "enabled": true,
     "buttonLabel": "Start a Project",
     "emailSubject": "New project enquiry"
+  },
+  "portal": {
+    "enabled": true,
+    "title": "Client Design Portal",
+    "intro": "Enter the access code provided to you to view and download your designs.",
+    "path": "client-portal.html"
   }
 }

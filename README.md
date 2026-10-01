@@ -38,3 +38,16 @@ V8 is the production-hardening build of the portfolio CMS.
 5. Save changes with **Save to GitHub**.
 
 The token is stored only in `sessionStorage` for the current browser session. Never publish the token in the repository.
+
+
+## Client Design Portal
+- Separate `client-portal.html` page for client access.
+- Admin-controlled global portal ON/OFF switch.
+- Individual client activation/deactivation.
+- Unique client access codes and copyable client links.
+- Client-specific design file uploads and downloads.
+- Client records are stored in `data/clients.json`; portal settings remain in `data/site.json`.
+- Client files are stored under `client-files/`.
+- For browser-based GitHub uploads, keep each client file below 25 MB for reliable operation.
+
+**Important:** this GitHub-only portal is a convenience access gate, not strong private-file security. If the repository is public, files stored in it are technically public to anyone who knows their URL.

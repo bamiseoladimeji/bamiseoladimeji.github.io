@@ -4,3 +4,12 @@
 .testimonial-photo-preview img{width:64px;height:64px;border-radius:50%;object-fit:cover}
 
 .service-admin,.nav-admin{border:1px solid #2a2d33;border-radius:12px;padding:18px;margin:14px 0;background:#0e1014}.reorder-row{border-top:1px solid #2a2d33;padding:12px 0}.reorder-row .actions{justify-content:flex-end}.nav-admin .item-head,.service-admin .item-head{margin-bottom:8px}.nav-admin .actions,.service-admin .actions{flex-wrap:nowrap}.service-admin .field:last-child,.nav-admin .field:last-child{margin-bottom:0}
+
+/* Client portal admin */
+.portal-status{margin-top:18px;padding:16px 18px;border-radius:10px;border:1px solid #2a2d33;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.portal-status.is-on{border-color:#315b3c;background:#102017}.portal-status.is-off{border-color:#6a3232;background:#201214;color:#ffb6b6}
+.client-card{border:1px solid #2a2d33;border-radius:14px;padding:20px;margin:16px 0;background:#0e1014}
+.client-code{font-family:ui-monospace,SFMono-Regular,monospace;color:#ff7b5a;font-size:12px;margin-top:5px}
+.client-code-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px 0;border-top:1px solid #2a2d33;border-bottom:1px solid #2a2d33;margin:18px 0}
+.client-code-row code{background:#080a0d;border:1px solid #2a2d33;border-radius:7px;padding:8px 10px;letter-spacing:.12em}
+.client-files{margin-top:18px}.client-file{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #2a2d33;padding:13px 0}.client-file div{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.client-file span{color:#858995;font-size:11px}.file-button{display:inline-flex;align-items:center;cursor:pointer}.file-button.busy{opacity:.6;pointer-events:none}

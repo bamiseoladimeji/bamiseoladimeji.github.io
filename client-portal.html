@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Client Design Portal</title>
+<link rel="stylesheet" href="client-portal.css">
+</head>
+<body>
+<main class="portal-shell">
+  <section class="portal-card" id="gate">
+    <div class="brand">BO / CLIENT PORTAL</div>
+    <div class="eyebrow">Private delivery area</div>
+    <h1 id="portalTitle">Client Design Portal</h1>
+    <p id="portalIntro">Enter the access code provided to you to view and download your designs.</p>
+    <form id="codeForm" class="code-form">
+      <label for="accessCode">Access code</label>
+      <div class="code-row"><input id="accessCode" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="BAM-XXXXXX" required><button type="submit">View Designs</button></div>
+      <div id="message" class="message" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="client-page hidden" id="clientPage">
+    <div class="client-top">
+      <div>
+        <div class="eyebrow">Client delivery</div>
+        <h1 id="clientName"></h1>
+        <p id="clientProject" class="project-name"></p>
+      </div>
+      <button class="back" id="changeCode" type="button">Change code</button>
+    </div>
+    <p id="clientDescription" class="description"></p>
+    <div id="files" class="files"></div>
+  </section>
+</main>
+<script src="js/client-portal.js"></script>
+</body>
+</html>
