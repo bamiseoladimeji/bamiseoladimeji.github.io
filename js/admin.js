@@ -5,6 +5,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function b64(s){return btoa(unescape(encodeURIComponent(s)))}
 function from64(s){return decodeURIComponent(escape(atob(s)))}
 function uid(prefix='item'){return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2,7)}`}
+function clientCode(){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let code='BAM-';for(let i=0;i<6;i++)code+=chars[Math.floor(Math.random()*chars.length)];return code.slice(0,7)+'-'+code.slice(7)}
 function val(path){return path.split('.').reduce((a,k)=>a[k],state)}
 function setPath(path,v){const parts=path.split('.');let o=state;parts.slice(0,-1).forEach(k=>o=o[k]);o[parts.at(-1)]=v}
 function input(label,path,value,multi=false){return `<div class="field"><label>${label}</label>${multi?`<textarea data-path="${path}">${esc(value)}</textarea>`:`<input data-path="${path}" value="${esc(value)}">`}</div>`}
