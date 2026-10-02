@@ -89,6 +89,43 @@ async function blobToBase64(blob) {
   return btoa(binary);
 }
 
+async function uploadRawFile(file, folder='client-files') {
+  if (!file) throw new Error('Please choose a file.');
+  const maxBytes = 25 * 1024 * 1024;
+  if (file.size > maxBytes) throw new Error('Client files must be 25 MB or smaller.');
+  const safeBase = file.name.replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^-+|-+$/g,'') || 'file';
+  const path = `${folder}/${Date.now()}-${safeBase}`;
+  const content = await blobToBase64(file);
+  const endpoint = `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${path.split('/').map(encodeURIComponent).join('/')}?ref=main`;
+  const r = await api(endpoint, {method:'PUT', body:JSON.stringify({message:`Upload client file ${safeBase}`,content,branch:'main'})});
+  const body = await r.text();
+  if (!r.ok) throw new Error(`Client file upload failed (${r.status}): ${body}`);
+  return {name:file.name,path,size:file.size};
+}
+
+async function deleteRepoFile(path) {
+  if (!path) return;
+  const endpoint = `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${path.split('/').map(encodeURIComponent).join('/')}?ref=main`;
+  const r = await api(endpoint);
+  if (!r.ok) throw new Error(`Could not find file (${r.status}).`);
+  const j = await r.json();
+  const d = await api(endpoint, {method:'DELETE', body:JSON.stringify({message:`Delete client file ${path.split('/').pop()}`,sha:j.sha,branch:'main'})});
+  const body = await d.text();
+  if (!d.ok) throw new Error(`File delete failed (${d.status}): ${body}`);
+}
+
+async function publishClients() {
+  const content = JSON.stringify(clientData, null, 2);
+  const payload = {message:'Update client portal records',content:b64(content),branch:'main'};
+  if (clientSha) payload.sha = clientSha;
+  const cr = await api(`/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/data/clients.json`, {method:'PUT',body:JSON.stringify(payload)});
+  const body = await cr.text();
+  if (!cr.ok) throw new Error(`Could not publish client records (${cr.status}): ${body}`);
+  const cj = JSON.parse(body);
+  clientSha = cj.content.sha;
+  clientDirty = false;
+}
+
 function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -187,7 +224,7 @@ window.toggleClient=i=>{collectClients();clientData.clients[i].active=clientData
 window.deleteClient=async i=>{collectClients();const c=clientData.clients[i];if(!confirm(`Delete “${c.name||'this client'}” and all of their portal files?`))return;try{for(const f of c.files||[])await deleteRepoFile(f.path)}catch(e){notice(e.message||'Some files could not be deleted.',false)}clientData.clients.splice(i,1);clientDirty=true;render();notice('Client deleted. Save to GitHub to publish.')}
 window.regenerateClientCode=i=>{collectClients();clientData.clients[i].code=clientCode();clientDirty=true;render();notice('New access code generated. The old code no longer works after saving.')}
 window.copyClientLink=i=>{collectClients();const c=clientData.clients[i];const base=new URL(state.portal.path||'client-portal.html',location.href);base.searchParams.set('code',c.code);navigator.clipboard?.writeText(base.href);notice('Client link copied.')}
-window.handleClientFile=async(inputEl,i)=>{const file=inputEl.files?.[0];if(!file)return;const c=clientData.clients[i];const btn=inputEl.closest('.file-button');if(btn)btn.classList.add('busy');try{const result=await uploadRawFile(file,`client-files/${c.id}`);c.files.push({id:uid('file'),name:result.name,path:result.path,size:result.size});clientDirty=true;render();notice('Client file uploaded. Save to GitHub to publish the client record.')}catch(e){notice(e.message||'File upload failed.',false)}finally{if(btn)btn.classList.remove('busy');inputEl.value=''}}
+window.handleClientFile=async(inputEl,i)=>{collect();collectClients();const file=inputEl.files?.[0];if(!file)return;const c=clientData.clients[i];const btn=inputEl.closest('.file-button');if(btn){btn.classList.add('busy');btn.style.pointerEvents='none'}try{if(!c?.id)throw new Error('This client has no valid ID. Please create the client again.');const result=await uploadRawFile(file,`client-files/${c.id}`);c.files.push({id:uid('file'),name:result.name,path:result.path,size:result.size});clientDirty=true;render();notice('File uploaded. Publishing client portal…');await publishClients();render();notice('File uploaded and published. It is now available in the Client Portal.')}catch(e){notice(e.message||'File upload failed.',false)}finally{if(btn){btn.classList.remove('busy');btn.style.pointerEvents=''}inputEl.value=''}}
 window.deleteClientFile=async(i,j)=>{collectClients();const f=clientData.clients[i].files[j];if(!confirm(`Delete “${f.name}”?`))return;try{await deleteRepoFile(f.path)}catch(e){notice(e.message||'Could not delete file.',false);return}clientData.clients[i].files.splice(j,1);clientDirty=true;render();notice('File deleted. Save to GitHub to publish.')}
 function testimonialEditor(x,i){return `<div class="testimonial-card"><div class="item-head"><strong>${esc(x.name||'New Testimonial')}</strong><button class="danger" type="button" onclick="deleteTestimonial(${i})">Delete</button></div>${input('Quote',`testimonials.${i}.quote`,x.quote,true)}<div class="two">${input('Client name',`testimonials.${i}.name`,x.name)}${input('Role / company',`testimonials.${i}.role`,x.role)}</div>${x.photo?`<div class="preview testimonial-photo-preview"><img src="${esc(x.photo)}" alt="Client photo"><span class="muted">Current client photo</span></div>`:''}${fileControl('Client photo (optional)',`testimonials.${i}.photo`,`testimonials.${i}.photoEnabled`)}<button class="danger" type="button" onclick="removeTestimonialPhoto(${i})">Delete client photo</button></div>`}
 function arrayAt(path){return path.split('.').reduce((a,k)=>a[k],state)}

@@ -1,13 +1,3 @@
 {
-  "clients": [
-    {
-      "id": "client-1790846410683-2ok4h",
-      "code": "BAM-552-CCT",
-      "name": "Fauzeeya Shuaibu",
-      "project": "PrymeKids",
-      "description": "Your design files are ready.",
-      "active": true,
-      "files": []
-    }
-  ]
+  "clients": []
 }
