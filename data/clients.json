@@ -1,3 +1,20 @@
 {
-  "clients": []
+  "clients": [
+    {
+      "id": "client-1790905577114-wmosa",
+      "code": "BAM-Y47-E2T",
+      "name": "Prymekids",
+      "project": "Social Media",
+      "description": "Your design files are ready.",
+      "active": true,
+      "files": [
+        {
+          "id": "file-1790905627589-i6juk",
+          "name": "slice1.jpg",
+          "path": "client-files/client-1790905577114-wmosa/1790905622380-slice1.jpg",
+          "size": 526942
+        }
+      ]
+    }
+  ]
 }
