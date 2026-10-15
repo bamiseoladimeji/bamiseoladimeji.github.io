@@ -49,7 +49,7 @@
     {
       "id": "project-01",
       "title": "PRYMEKIDS",
-      "category": "Brand Identity/Social Media",
+      "category": "Brand Identity/Social Media Design",
       "year": "2026",
       "description": "Building a visual language for young learners",
       "image": "assets/media/1792051896532-full-logo.webp",
@@ -71,8 +71,8 @@
           "title": "Social Media Design 2"
         }
       ],
-      "viewMoreLabel": "View More",
-      "viewMoreUrl": "",
+      "viewMoreLabel": "https://pin.it/6hWxGmtG6",
+      "viewMoreUrl": "https://pin.it/6hWxGmtG6",
       "client": "",
       "role": "Lead Graphic Designer",
       "overview": "PrymeKids needed its brand ideas turned into content kids and parents would actually stop and look at — starting from dense brochure material that needed a friendlier, more visual translation.",
@@ -83,20 +83,36 @@
     },
     {
       "id": "project-02",
-      "title": "Good Food",
-      "category": "Social Media Design",
+      "title": "XEL",
+      "category": "Brand Identity/Social Media Design",
       "year": "2026",
-      "description": "A bright campaign system designed to make food, freshness and personality impossible to miss.",
-      "image": "assets/project-02.svg",
+      "description": "Building an agent-native university, not a software tool.",
+      "image": "assets/media/1792052524025-xel-full-logo.webp",
       "featured": true,
-      "gallery": [],
-      "viewMoreLabel": "View More",
-      "viewMoreUrl": "",
+      "gallery": [
+        {
+          "id": "gallery-1792052531102-t5gr1",
+          "image": "assets/media/1792052815398-xel-gridsystem.webp",
+          "title": "Logo Grid System"
+        },
+        {
+          "id": "gallery-1792053037588-abna5",
+          "image": "assets/media/1792053078724-xel-content-1.webp",
+          "title": "Social Media Design 1"
+        },
+        {
+          "id": "gallery-1792053086227-x2ji7",
+          "image": "assets/media/1792053117285-xel-content-2.webp",
+          "title": "Social Media Design 2"
+        }
+      ],
+      "viewMoreLabel": "https://pin.it/3Yi93hVsn",
+      "viewMoreUrl": "https://pin.it/3Yi93hVsn",
       "client": "",
       "role": "Graphic Designer / Art Director",
-      "overview": "A bright campaign system designed to make food, freshness and personality impossible to miss.",
+      "overview": "Xel is an agent-native healthcare university whose visual identity leverages Inter typography, a primary #2563EB blue palette, and a grid-constructed logo mark to convey systematic trust and scale.",
       "challenge": "",
-      "strategy": "",
+      "strategy": "My approach applies strict geometric grid alignment, high-contrast visual hierarchy, and task-driven layout structures to reflect Xel's autonomous AI coordination while maintaining brand integrity across all touchpoints.",
       "solution": "",
       "results": ""
     },
