@@ -69,12 +69,17 @@
           "id": "gallery-1792052073435-tuh7f",
           "image": "assets/media/1792052120219-social-content_prymekids2.webp",
           "title": "Social Media Design 2"
+        },
+        {
+          "id": "gallery-1792053312895-4ik6x",
+          "image": "assets/media/1792053410693-october-2nd.webp",
+          "title": "Social Media Design 3"
         }
       ],
-      "viewMoreLabel": "https://pin.it/6hWxGmtG6",
+      "viewMoreLabel": "View More",
       "viewMoreUrl": "https://pin.it/6hWxGmtG6",
       "client": "",
-      "role": "Lead Graphic Designer",
+      "role": "Lead Creative Designer",
       "overview": "PrymeKids needed its brand ideas turned into content kids and parents would actually stop and look at — starting from dense brochure material that needed a friendlier, more visual translation.",
       "challenge": "",
       "strategy": "I rebuilt the brochure content as a system of infographics, then extended that system into two ongoing content formats so the brand had a consistent voice across posts and stories, not just one-off graphics.",
@@ -104,12 +109,17 @@
           "id": "gallery-1792053086227-x2ji7",
           "image": "assets/media/1792053117285-xel-content-2.webp",
           "title": "Social Media Design 2"
+        },
+        {
+          "id": "gallery-1792053437582-h3ws4",
+          "image": "assets/media/1792053478677-ready-to-become-a-cna-design.webp",
+          "title": "Social Media Design 3"
         }
       ],
-      "viewMoreLabel": "https://pin.it/3Yi93hVsn",
+      "viewMoreLabel": "View More",
       "viewMoreUrl": "https://pin.it/3Yi93hVsn",
       "client": "",
-      "role": "Graphic Designer / Art Director",
+      "role": "Lead Creative Designer",
       "overview": "Xel is an agent-native healthcare university whose visual identity leverages Inter typography, a primary #2563EB blue palette, and a grid-constructed logo mark to convey systematic trust and scale.",
       "challenge": "",
       "strategy": "My approach applies strict geometric grid alignment, high-contrast visual hierarchy, and task-driven layout structures to reflect Xel's autonomous AI coordination while maintaining brand integrity across all touchpoints.",
@@ -118,36 +128,52 @@
     },
     {
       "id": "project-03",
-      "title": "Next Gen",
-      "category": "Poster Design",
-      "year": "2025",
-      "description": "An experimental poster series exploring typography, scale and contemporary culture.",
-      "image": "assets/project-03.svg",
+      "title": "THE POTTER'S PORCH INTERNATIONAL CHURCHES",
+      "category": "Social Media Design",
+      "year": "2026",
+      "description": "Curating Storytelling Visuals for the religious organization ",
+      "image": "assets/media/1792053739952-tppic1.webp",
       "featured": true,
-      "gallery": [],
+      "gallery": [
+        {
+          "id": "gallery-1792053750839-u36q2",
+          "image": "assets/media/1792053783091-tppic2.webp",
+          "title": "Social Media Design 1"
+        },
+        {
+          "id": "gallery-1792053981721-g5y5a",
+          "image": "assets/media/1792054029020-tppic3.webp",
+          "title": "Social Media Design 2"
+        },
+        {
+          "id": "gallery-1792054070310-wl1tg",
+          "image": "assets/media/1792054204410-sunday-service---06th-september.webp",
+          "title": "Social Media Design 3"
+        }
+      ],
       "viewMoreLabel": "View More",
-      "viewMoreUrl": "",
+      "viewMoreUrl": "https://pin.it/n0QdYtzVO",
       "client": "",
-      "role": "Graphic Designer / Art Director",
-      "overview": "An experimental poster series exploring typography, scale and contemporary culture.",
+      "role": "Associate Graphic Designer",
+      "overview": "TPPIC — Lagos needed consistency in their designs, linking deigns to each other so they can feel like one by maintaining font choice, colour palette and other resources that will contribute to the uniformity of the design.",
       "challenge": "",
-      "strategy": "",
+      "strategy": "I studied their designs and formulate the matching colour palette to their previous designs, and i also gathered resources that complement the ones on ground, this which helped me maintain the consistency they sought.",
       "solution": "",
       "results": ""
     },
     {
       "id": "project-04",
-      "title": "GreenFlow",
-      "category": "UI/UX Design",
-      "year": "2025",
-      "description": "A clean digital experience for a sustainability-focused product.",
+      "title": "DREAMNEST",
+      "category": "Contract Creative Designer",
+      "year": "2026",
+      "description": "A clean storytelling experience for a sustainability-focused product.",
       "image": "assets/project-04.svg",
       "featured": false,
       "gallery": [],
       "viewMoreLabel": "View More",
       "viewMoreUrl": "",
       "client": "",
-      "role": "Graphic Designer / Art Director",
+      "role": "Creative Designer",
       "overview": "A clean digital experience for a sustainability-focused product.",
       "challenge": "",
       "strategy": "",
