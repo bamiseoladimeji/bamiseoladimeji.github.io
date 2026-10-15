@@ -48,20 +48,36 @@
   "projects": [
     {
       "id": "project-01",
-      "title": "NEXA",
-      "category": "Brand Identity",
+      "title": "PRYMEKIDS",
+      "category": "Brand Identity/Social Media",
       "year": "2026",
-      "description": "A bold visual identity built around contrast, movement and a confident editorial voice.",
-      "image": "assets/project-01.svg",
+      "description": "Building a visual language for young learners",
+      "image": "assets/media/1792051896532-full-logo.webp",
       "featured": true,
-      "gallery": [],
+      "gallery": [
+        {
+          "id": "gallery-1792051907494-b357p",
+          "image": "assets/media/1792051981994-prymekids-grid-system.webp",
+          "title": "Logo Grid System"
+        },
+        {
+          "id": "gallery-1792051996958-i63l7",
+          "image": "assets/media/1792052063543-social-content_prymekids1.webp",
+          "title": "Social Media Design 1"
+        },
+        {
+          "id": "gallery-1792052073435-tuh7f",
+          "image": "assets/media/1792052120219-social-content_prymekids2.webp",
+          "title": "Social Media Design 2"
+        }
+      ],
       "viewMoreLabel": "View More",
       "viewMoreUrl": "",
       "client": "",
-      "role": "Graphic Designer / Art Director",
-      "overview": "A bold visual identity built around contrast, movement and a confident editorial voice.",
+      "role": "Lead Graphic Designer",
+      "overview": "PrymeKids needed its brand ideas turned into content kids and parents would actually stop and look at — starting from dense brochure material that needed a friendlier, more visual translation.",
       "challenge": "",
-      "strategy": "",
+      "strategy": "I rebuilt the brochure content as a system of infographics, then extended that system into two ongoing content formats so the brand had a consistent voice across posts and stories, not just one-off graphics.",
       "solution": "",
       "results": ""
     },
